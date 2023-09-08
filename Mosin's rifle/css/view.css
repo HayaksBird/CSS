@@ -73,6 +73,7 @@ ul, ol {
     width: 100%;
 }
 
+
 /* RIFLE COLORS */
 .rifle-colors p {
     font-size: 12px;
@@ -123,6 +124,7 @@ ul, ol {
 }
 
 .additional-info {
+    padding-top: 5px;
     background-color: black;
     color: white;
 }
@@ -146,7 +148,6 @@ ul, ol {
     display: inline-block;
     padding: 5px 10px;
 }
-
 
 
 /* 'MORE INFO' LINK */
