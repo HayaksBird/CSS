@@ -2,6 +2,7 @@
     /* CLEAR ANY OFFSET */
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -25,23 +26,49 @@ p {
     margin-bottom: 10px;
 }
 
-h3 {
-    margin-bottom: 20px;
-    margin-top: 40px;
+
+/* RIFLE COLORS */
+.rifle-colors p {
+    font-size: 10px;
+    margin: 0;
+    color: black;
 }
 
-h4 {
-    margin-bottom: 5px;
+.rifle-colors img {
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
 }
 
-ul, ol {
-    margin-left: 50px;
+.rifle-colors img:hover {
+    cursor: pointer;
+    border: 1px dashed black;
 }
 
+.rifle-colors ul {
+    margin: 0;
+}
+
+.rifle-colors li {
+    text-align: center;
+    width: 70px;
+    vertical-align: top;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.rifle-colors li:first-child {
+    margin-left: 0;
+}
+
+.rifle-colors li:last-child {
+    margin-right: 0;
+}
 
 /* STYLING */
-.item p {
-    margin-bottom: 20px;
+.free-ship {
+    margin-left: auto;
+    font-size: 13px;
 }
 
 .price {
@@ -53,10 +80,12 @@ ul, ol {
 .related-list-style {
     list-style-type: square;
     color: black;
+    margin-left: 30px;
 }
 
-.shrink {
-    font-size: 13px;
+.related-list-style p {
+    font-size: 15px;
+    margin-bottom: 12px;
 }
 
 .main-header {
@@ -73,59 +102,20 @@ ul, ol {
     width: 100%;
 }
 
-
-/* RIFLE COLORS */
-.rifle-colors p {
-    font-size: 12px;
-    margin: 0;
-    color: black;
-}
-
-.rifle-colors img {
-    border: 1px solid black;
-    width: 30px;
-    height: 30px;
-}
-
-.rifle-colors img:hover {
-    cursor: pointer;
-    border: 1px dashed black;
-}
-
-.rifle-colors li {
-    width: 85px;
-    vertical-align: top;
-    display: inline-block;
-    margin: 0 20px;
-}
-
-.rifle-colors ul {
-    text-align: center; /* Center the inline elements within this element */
-    margin: 30px 0;
-}
-
-
-/* STYLING FOR CUSTOM DIVISIONS */
 .container {
     background-color: white;
     border: 3px solid black;
-    width: 800px;
+    width: 700px;
     margin: 0 auto; /* make margin on the both sides identical */
     position: relative;
 }
 
-.price-container {
-    margin: 20px 0;
-}
-
-/* Able to make all private fields public */
-.price-container * {
-    margin: 0;
-}
-
 .additional-info {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     padding-top: 5px;
-    background-color: black;
     color: white;
 }
 
@@ -179,4 +169,29 @@ ul, ol {
     color: black;
     border-left: none;
     border-right: none;
+    border-bottom: none;
+}
+
+
+/* LAYERS */
+.layer1 {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.layer2 {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.price-layer {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.details {
+    order: -1;
+    align-self: flex-end;
 }
